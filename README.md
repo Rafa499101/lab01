@@ -120,81 +120,125 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Azure AD tenant and, in the **Manage** section, click **Licenses**.
 
    > **Note**: Azure AD Premium P1 or P2 licenses are required in order to implement dynamic groups.
+   >
+   > ![](img/img20.PNG)
 
 2. In the **Manage** section, click **All products**.
 
+![](img/img21.PNG)
+
 3. Click **+ Try/Buy** and activate the free trial of Azure AD Premium P2.
+
+![](img/img22.PNG)
 
 4. Refresh the browser window to verify that the activation was successful.
 
+![](img/img23.PNG)
+
 > **Note**: It can take up to 10 minutes for the licenses to activate. Continue refreshing the page until it appears. Do not proceed until the licenses have been activated.
 
-1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
+5. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
 
-2. In the Azure portal, navigate back to the Azure AD tenant blade and click **Groups**.
+   ![](img/img24.PNG)
 
-3. Use the **+ New group** button to create a new group with the following settings:
+![](img/img25.PNG)
 
-   | Setting           | Value                               |
-   | :---------------- | :---------------------------------- |
-   | Group type        | **Security**                        |
-   | Group name        | **IT Cloud Administrators**         |
-   | Group description | **Contoso IT cloud administrators** |
-   | Membership type   | **Dynamic User**                    |
+![](img/img26.PNG)
 
-   > **Note**: If the **Membership type** drop-down list is grayed out, wait a few minutes and refresh the browser page.
+![](img/img27.PNG)
 
-4. Click **Add dynamic query**.
+6. In the Azure portal, navigate back to the Azure AD tenant blade and click **Groups**.
 
-5. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following settings:
+7. Use the **+ New group** button to create a new group with the following settings:
 
-   | Setting  | Value                   |
-   | :------- | :---------------------- |
-   | Property | **jobTitle**            |
-   | Operator | **Equals**              |
-   | Value    | **Cloud Administrator** |
+| Setting           | Value                               |
+| :---------------- | :---------------------------------- |
+| Group type        | **Security**                        |
+| Group name        | **IT Cloud Administrators**         |
+| Group description | **Contoso IT cloud administrators** |
+| Membership type   | **Dynamic User**                    |
 
-6. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**.
+> **Note**: If the **Membership type** drop-down list is grayed out, wait a few minutes and refresh the browser page.
+>
+> ![](img/img28.PNG)
 
-7. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button and create a new group with the following settings:
-
-   | Setting           | Value                                |
-   | :---------------- | :----------------------------------- |
-   | Group type        | **Security**                         |
-   | Group name        | **IT System Administrators**         |
-   | Group description | **Contoso IT system administrators** |
-   | Membership type   | **Dynamic User**                     |
+![](img/img29.PNG)
 
 8. Click **Add dynamic query**.
 
 9. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following settings:
 
-   | Setting  | Value                    |
-   | :------- | :----------------------- |
-   | Property | **jobTitle**             |
-   | Operator | **Equals**               |
-   | Value    | **System Administrator** |
+| Setting  | Value                   |
+| :------- | :---------------------- |
+| Property | **jobTitle**            |
+| Operator | **Equals**              |
+| Value    | **Cloud Administrator** |
+
+![](img/img32.PNG)
 
 10. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**.
 
-11. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button, and create a new group with the following settings:
+11. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button and create a new group with the following settings:
 
-    | Setting           | Value                             |
-    | :---------------- | :-------------------------------- |
-    | Group type        | **Security**                      |
-    | Group name        | **IT Lab Administrators**         |
-    | Group description | **Contoso IT Lab administrators** |
-    | Membership type   | **Assigned**                      |
+| Setting           | Value                                |
+| :---------------- | :----------------------------------- |
+| Group type        | **Security**                         |
+| Group name        | **IT System Administrators**         |
+| Group description | **Contoso IT system administrators** |
+| Membership type   | **Dynamic User**                     |
 
-12. Click **No members selected**.
+![](img/img31.PNG)
 
-13. From the **Add members** blade, search and select the **IT Cloud Administrators** and **IT System Administrators** groups and, back on the **New Group** blade, click **Create**.
+12. Click **Add dynamic query**.
 
-14. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
+13. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following settings:
 
-    > **Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding a whitespace at the end, and **Save** the change.
+| Setting  | Value                    |
+| :------- | :----------------------- |
+| Property | **jobTitle**             |
+| Operator | **Equals**               |
+| Value    | **System Administrator** |
 
-15. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
+![](img/img33.PNG)
+
+14. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**.
+
+15. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button, and create a new group with the following settings:
+
+| Setting           | Value                             |
+| :---------------- | :-------------------------------- |
+| Group type        | **Security**                      |
+| Group name        | **IT Lab Administrators**         |
+| Group description | **Contoso IT Lab administrators** |
+| Membership type   | **Assigned**                      |
+
+![](img/img31.PNG)
+
+16. Click **No members selected**.
+
+17. From the **Add members** blade, search and select the **IT Cloud Administrators** and **IT System Administrators** groups and, back on the **New Group** blade, click **Create**.
+
+![](img/img48.PNG)
+
+![](img/img34.PNG)
+
+18. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
+
+> **Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding a whitespace at the end, and **Save** the change.
+>
+> ![](img/img47.PNG)
+
+![](img/img54.PNG)
+
+![](img/img51.PNG)
+
+19. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
+
+![](img/img47.PNG)
+
+![](img/img53.PNG)
+
+![](img/img52.PNG)
 
 #### Task 3: Create an Azure Active Directory (AD) tenant (Optional - Lab environment issue)
 
@@ -210,6 +254,10 @@ In this task, you will create a new Azure AD tenant.
    | :------------- | :------------------------- |
    | Directory type | **Azure Active Directory** |
 
+   ![](img/img35.PNG)
+
+   ![](img/img36.PNG)
+
 3. Click **Next : Configuration**
 
    | Setting             | Value                                                        |
@@ -220,15 +268,23 @@ In this task, you will create a new Azure AD tenant.
 
    > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
+   ![](img/img37.PNG)
+
 4. Click **Review + create** and then click **Create**.
 
 5. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+
+   ![](img/img38.PNG)
+
+![](img/img39.PNG)
 
 #### Task 4: Manage Azure AD guest users.
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
 
 1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user**.
+
+   ![](img/img40.PNG)
 
 2. Create a new user with the following settings (leave others with their defaults):
 
@@ -241,11 +297,17 @@ In this task, you will create Azure AD guest users and grant them access to reso
    | Job title                  | **System Administrator**      |
    | Department                 | **IT**                        |
 
+   ![](img/img41.PNG)
+
 3. Click on the newly created profile.
 
    > **Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
+   ![](img/img42.PNG)
+
 4. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+
+   ![](img/img43.PNG)
 
 5. Navigate back to the **Users - All users** blade, and then click **+ Invite external user**.
 
@@ -259,10 +321,22 @@ In this task, you will create Azure AD guest users and grant them access to reso
    | Job title      | **Lab Administrator**                                   |
    | Department     | **IT**                                                  |
 
+   ![](img/img44.PNG)
+
+   ![](img/img45.PNG)
+
 7. Click **Invite**.
 
 8. Back on the **Users - All users** blade, click the entry representing the newly created guest user account.
 
+   ![](img/img46.PNG)
+
 9. On the **az104-01b-aaduser1 - Profile** blade, click **Groups**.
 
+   ![](img/img47.PNG)
+
 10. Click **+ Add membership** and add the guest user account to the **IT Lab Administrators** group.
+
+    ![](img/img48.PNG)
+
+#### Task 5: Clean up resources
